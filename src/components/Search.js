@@ -6,8 +6,16 @@ const Search = ({ emojiLookingFor, setEmojiLookingFor }) => {
         setEmojiLookingFor(value);
     };
     return (
-        <header>
-            <h1>😃 Emoji Search 🥳</h1>
+        <header container>
+            <h1>
+                <span role="img" aria-label="smile">
+                    😃
+                </span>
+                <span> Emoji Search </span>
+                <span role="img" aria-label="smile">
+                    😃
+                </span>
+            </h1>
             <input
                 type="text"
                 name="Emoji Search"
