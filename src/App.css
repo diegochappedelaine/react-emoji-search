@@ -1,111 +1,121 @@
 html {
-    font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .container {
-    width: 1024px;
-    margin: 0 auto;
+  width: 1024px;
+  margin: 0 auto;
 }
 
 h1 {
-    font-size: 48px;
-    line-height: 59px;
-    margin: 40px 0;
+  font-size: 48px;
+  line-height: 59px;
+  margin: 40px 0;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+button:hover {
+  color: darkgray;
+  cursor: pointer;
 }
 
 .body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
 }
 
 .shrink {
-    transition: all 0.05s ease-in-out;
+  transition: all 0.05s ease-in-out;
 }
 
 .shrink:hover {
-    cursor: pointer;
-    transform: scale(1.01);
+  cursor: pointer;
+  transform: scale(1.01);
 }
 
 .hover:hover {
-    background: #f8efef;
+  background: #f8efef;
 }
 
 input {
-    width: 620px;
-    height: 50px;
-    background: #f8efef;
-    border: 1px solid #dcc8c8;
-    box-sizing: border-box;
-    border-radius: 3px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 12px;
-    line-height: 15px;
-    padding: 10px 30px;
-    margin-bottom: 30px;
+  width: 620px;
+  height: 50px;
+  background: #f8efef;
+  border: 1px solid #dcc8c8;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 10px 30px;
+  margin-bottom: 30px;
 }
 
 .line {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #fcfbfb;
-    border: 1px solid #dcc8c8;
-    box-sizing: border-box;
-    border-radius: 3px;
-    height: 60px;
-    font-size: 24px;
-    line-height: 29px;
-    padding: 10px 30px;
-    font-weight: 300;
-    margin-bottom: 15px;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fcfbfb;
+  border: 1px solid #dcc8c8;
+  box-sizing: border-box;
+  border-radius: 3px;
+  height: 60px;
+  font-size: 24px;
+  line-height: 29px;
+  padding: 10px 30px;
+  font-weight: 300;
+  margin-bottom: 15px;
+  width: 100%;
 }
 
 .line span {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .hidden-text {
-    color: grey;
-    font-size: 15px;
-    transition: all 0.02s ease-in-out;
+  color: grey;
+  font-size: 15px;
+  transition: all 0.02s ease-in-out;
 }
 
 .copy {
-    display: flex;
-    align-items: center;
-    font-size: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 10px;
 }
 
 footer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
 }
 
 footer a {
-    text-decoration: none;
-    font-weight: 500;
-    color: #5c48d3;
+  text-decoration: none;
+  font-weight: 500;
+  color: #5c48d3;
 }
 
 @media (max-width: 1000px) {
-    .container {
-        width: 80vw;
-        margin: 0;
-    }
+  .container {
+    width: 80vw;
+    margin: 0;
+  }
 }

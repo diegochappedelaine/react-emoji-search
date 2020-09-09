@@ -9,30 +9,34 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 library.add(faCheck);
 
 function App() {
-    const [emojiLookingFor, setEmojiLookingFor] = useState("");
-    return (
-        <div className="body">
-            <Search
-                emojiLookingFor={emojiLookingFor}
-                setEmojiLookingFor={setEmojiLookingFor}
-            />
-            <main>
-                {Emoji.map((emoji, index) => {
-                    let notCaseSensitive = new RegExp(emojiLookingFor, "i");
-                    if (notCaseSensitive.test(emoji.keywords)) {
-                        return (
-                            <Line title={emoji.title} symbol={emoji.symbol} />
-                        );
-                    } else if (!emojiLookingFor) {
-                        return (
-                            <Line title={emoji.title} symbol={emoji.symbol} />
-                        );
-                    }
-                })}
-            </main>
-            <Footer />
-        </div>
-    );
+  const [emojiLookingFor, setEmojiLookingFor] = useState("");
+
+  return (
+    <div className="body">
+      <Search
+        emojiLookingFor={emojiLookingFor}
+        setEmojiLookingFor={setEmojiLookingFor}
+      />
+      <main>
+        {emojiLookingFor
+          ? Emoji.map((emoji, index) => {
+              let notCaseSensitive = new RegExp(emojiLookingFor, "i");
+              if (notCaseSensitive.test(emoji.keywords)) {
+                return (
+                  <Line key={index} title={emoji.title} symbol={emoji.symbol} />
+                );
+              }
+              return <></>;
+            })
+          : Emoji.map((emoji, index) => {
+              return (
+                <Line key={index} title={emoji.title} symbol={emoji.symbol} />
+              );
+            })}
+      </main>
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
